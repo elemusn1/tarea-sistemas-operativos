@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect
 import sqlite3
 import os
 
@@ -47,6 +47,6 @@ def agregar_tarea():
 
 if __name__ == '__main__':
     init_db()
-    # Usamos el puerto que nos asigne la nube o el 5000 por defecto
+    # Configuración limpia para el puerto de la nube
     port = int(os.environ.get("PORT", 5000))
-    app.run(host='0.0.0.0', port=port, debug=True)
+    app.run(host='0.0.0.0', port=port)
