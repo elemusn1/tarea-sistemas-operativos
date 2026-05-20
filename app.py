@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect
 import sqlite3
 import os
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='.')
 
 DB_FILE = "database.db"
 
